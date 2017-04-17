@@ -25,11 +25,11 @@ same pin numbering to DB9 connector
 
 # Power supply
 
-Get 3.3V switching power supply modile from ebay for $2.
+Get 3.3V switching power supply module from ebay for $2:
 
     2A DC 5V-23V to 3.3V DC-DC Step-Down Power Supply Buck Module for esp8266 WiFi
 
-On the back of the module is written
+On the back of the module PCB is written:
 
        Canton-Power
           DC-DC
