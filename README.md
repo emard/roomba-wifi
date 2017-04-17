@@ -3,6 +3,7 @@
 Wifi remote control interface for the iRobot Roomba vacuum cleaner.
 
 # Cable
+
 Adafruit has roomba cable.
 Also apple or mac 8-pin mini-din cable ordered from ebay/uk
 will fit to roomba socket.
@@ -21,3 +22,16 @@ pinout (wire colors inside of apple cable)
     SHIELD naked
 
 same pin numbering to DB9 connector
+
+# Power supply
+
+Get 3.3V switching power supply modile from ebay for $2.
+
+    2A DC 5V-23V to 3.3V DC-DC Step-Down Power Supply Buck Module for esp8266 WiFi
+
+On the back of the module is written
+
+       Canton-Power
+          DC-DC
+    Step-Down Converter
+    3.3V
