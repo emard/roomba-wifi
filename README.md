@@ -5,8 +5,9 @@ Wifi remote control interface for the iRobot Roomba vacuum cleaner.
 # Cable
 
 Adafruit has roomba cable.
-Also apple or mac 8-pin mini-din cable ordered from ebay/uk
-will fit to roomba socket.
+Also apple or mac 8-pin mini-din cable ordered from ebay
+will fit to roomba socket (it has extra middle pin which
+is NC in roomba socket).
 
 pinout (wire colors inside of apple cable)
 
@@ -18,8 +19,7 @@ pinout (wire colors inside of apple cable)
     6  GND    green
     7  GND    blue
     8  NC     violet (middle pin)
-
-    SHIELD naked
+    SHIELD    naked
 
 same pin numbering to DB9 connector
 
