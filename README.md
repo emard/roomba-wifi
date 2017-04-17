@@ -2,6 +2,13 @@
 
 Wifi remote control interface for the iRobot Roomba vacuum cleaner.
 
+# Wifi Module
+
+Get nodemcu from ebay for $3.5 and flash it with some TCP-serial
+bridge code:
+
+![nodemcu](/pic/nodemcu.jpg)
+
 # Cable
 
 Adafruit has roomba cable.
@@ -27,9 +34,9 @@ same pin numbering to DB9 connector
 
 Get 3.3V switching power supply module from ebay for $2:
 
-![3.3V converter](/pic/3V3-converter.jpg)
-
     2A DC 5V-23V to 3.3V DC-DC Step-Down Power Supply Buck Module for esp8266 WiFi
+
+![3.3V converter](/pic/3V3-converter.jpg)
 
 On the back of the module PCB is written:
 
