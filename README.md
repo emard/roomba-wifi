@@ -46,3 +46,10 @@ pinout (wire colors inside of apple cable)
     SHIELD    naked
 
 same pin numbering to DB9 connector
+
+# PCB
+
+You can order from OSHpark, seeedstudio or similar, email them gerber
+files and they will send back the PCB:
+
+![pcb](/pi/wifi-roomba.jpg)
