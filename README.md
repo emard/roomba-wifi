@@ -9,27 +9,6 @@ bridge code:
 
 ![nodemcu](/pic/nodemcu.jpg)
 
-# Cable
-
-Adafruit has roomba cable.
-Also apple or mac 8-pin mini-din cable ordered from ebay
-will fit to roomba socket (it has extra middle pin which
-is NC in roomba socket).
-
-pinout (wire colors inside of apple cable)
-
-    1  Vpwr   red    ? no voltage
-    2  Vpwr   brown  20V
-    3  RXD    orange input to roomba 5V TTL
-    4  TXD    black  output from roomba 5V TTL
-    5  DD     yellow
-    6  GND    green
-    7  GND    blue
-    8  NC     violet (middle pin)
-    SHIELD    naked
-
-same pin numbering to DB9 connector
-
 # Power supply
 
 Get 3.3V switching power supply module from ebay for $2:
@@ -44,3 +23,26 @@ On the back of the module PCB is written:
           DC-DC
     Step-Down Converter
     3.3V[x] 5V[ ] Vi GND Vo
+
+# Cable
+
+Adafruit has roomba cable.
+Also apple or mac 8-pin mini-din cable ordered from ebay
+will fit to roomba socket (it has extra middle pin which
+is NC in roomba socket).
+
+![cable](/pic/cable.jpg)
+
+pinout (wire colors inside of apple cable)
+
+    1  Vpwr   red    ? no voltage
+    2  Vpwr   brown  20V
+    3  RXD    orange input to roomba 5V TTL
+    4  TXD    black  output from roomba 5V TTL
+    5  DD     yellow
+    6  GND    green
+    7  GND    blue
+    8  NC     violet (middle pin)
+    SHIELD    naked
+
+same pin numbering to DB9 connector
