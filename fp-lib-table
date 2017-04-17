@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name nodemcu)(type KiCad)(uri "$(KIPRJMOD)/footprints/nodemcu/nodemcu.pretty")(options "")(descr ""))
+  (lib (name smps-3v3)(type KiCad)(uri "$(KIPRJMOD)/footprints/smps-3v3.pretty")(options "")(descr ""))
+)
