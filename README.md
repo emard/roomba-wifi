@@ -37,9 +37,9 @@ pinout (wire colors inside of apple cable)
 
     1  Vpwr   red    ? no voltage
     2  Vpwr   brown  20V
-    3  RXD    orange input to roomba 5V TTL
-    4  TXD    black  output from roomba 5V TTL
-    5  DD     yellow
+    3  RXD    orange input to roomba 5V TTL wifi_gpio13
+    4  TXD    black  output from roomba 5V TTL wifi_gpio15
+    5  DD     yellow wifi_gpio12
     6  GND    green
     7  GND    blue
     8  NC     violet (middle pin)
