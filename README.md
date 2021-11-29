@@ -22,7 +22,10 @@ if you telnet to roomba, you should see something like this:
 
 if you type CTRL-G and press ENTER, roomba 880 will reset as if battery was
 replaced and you should hear beep and see printed different messages 
-after reset and again battery charging messages as above
+after reset and again battery charging messages as above.
+
+Other commands are described in
+[iRobot Roomba 600 Open Interface Spec](https://www.irobotweb.com/-/media/MainSite/PDFs/About/STEM/Create/iRobot_Roomba_600_Open_Interface_Spec.pdf)
 
 ![nodemcu](/pic/nodemcu.jpg)
 
