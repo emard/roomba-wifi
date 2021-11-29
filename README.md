@@ -22,14 +22,13 @@ to exit telnet, type CTRL-] quit ENTER
     ^]
     telnet> quit
 
-python3 code to connect, print similar data and send "DOCK" command
+python3 code to connect and send "DOCK" command
 
     #!/usr/bin/env python3
     import socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("192.168.0.2",23))
-    data = s.recv(1024)
-    print(data)
+    #print(s.recv(256))
     #s.send(bytearray([128, 135, 173])) # start, clean, stop
     s.send(bytearray([128, 143, 173])) # start, seek dock, stop
     s.close()
