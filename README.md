@@ -1,6 +1,8 @@
 # WiFi-Roomba: ESP8266 Nodemcu interface for iRobot Roomba
 
 Wifi remote control interface for the iRobot Roomba vacuum cleaner.
+Tested on model 880, others 600-900 have similar command
+set and probably will work too.
 
 telnet to roomba IP while it is charging, it should display something like this:
 
@@ -13,9 +15,9 @@ telnet to roomba IP while it is charging, it should display something like this:
     bat:   min 0  sec 12  mV 17061  mA 1008  tenths-deg-C 348  mAH 2696  state 5  
     bat:   min 0  sec 13  mV 17061  mA 1023  tenths-deg-C 348  mAH 2696  state 5  
 
-to reset roomba, type CTRL-G and ENTER, roomba 880 resets as if battery was
-replaced, beeps and prints different messages after reset and again battery
-charging messages as above.
+To reset roomba to similar state like battery was replaced,
+type CTRL-G and ENTER. Roomba beeps and prints different
+messages after reset and again battery charging messages as above.
 
 to exit telnet, type CTRL-] quit ENTER
 
