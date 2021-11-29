@@ -2,7 +2,7 @@
 
 Wifi remote control interface for the iRobot Roomba vacuum cleaner.
 
-telnet to roomba IP should display something like this:
+telnet to roomba IP while it is charging, it should display something like this:
 
     telnet 192.168.0.2
     Trying 192.168.0.2...
