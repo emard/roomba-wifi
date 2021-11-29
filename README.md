@@ -28,8 +28,8 @@ set board to "NodeMCU 1.0 (ESP-12E Module)".
 open Examples -> ESP8266Wifi ->  WifiTelnetToSerial
 
 setup WiFi user and password to connect to local access 
-point and enable "SWAP_PINS" to use hardware serial connected
-as RX=gpio13, TX=gpio15 to Roomba:
+point and enable "SWAP_PINS" to use hardware serial 115200,8,n,1
+connected as RX=gpio13, TX=gpio15 to Roomba:
 
     #define SWAP_PINS 1
 
