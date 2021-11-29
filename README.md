@@ -17,6 +17,11 @@ to reset roomba, type CTRL-G and ENTER, roomba 880 resets as if battery was
 replaced, beeps and prints different messages after reset and again battery
 charging messages as above.
 
+to exit telnet, type CTRL-] quit ENTER
+
+    ^]
+    telnet> quit
+
 python3 code to connect, print similar data and send "DOCK" command
 
     #!/usr/bin/env python3
