@@ -21,11 +21,12 @@ Other commands are described in
 Get nodemcu from ebay for $3.5 and flash it with some TCP-serial
 bridge code from Arduino Examples "WifiTelnetToSerial", setup WiFi
 user and password to connect to local access point and swap pins to
-use hardware serial at RX=gpio13, TX=gpio15
+use hardware serial at RX=gpio13, TX=gpio15 for Roomba:
 
     #define SWAP_PINS 1
 
-When monitored at serial port, it will print IP address where it connected
+When monitored at USB-serial port, it will print IP address where it
+connected.
 
 ![nodemcu](/pic/nodemcu.jpg)
 
