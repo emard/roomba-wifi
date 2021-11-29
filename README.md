@@ -17,7 +17,7 @@ to reset roomba, type CTRL-G and ENTER, roomba 880 resets as if battery was
 replaced, beeps and prints different messages after reset and again battery
 charging messages as above.
 
-python3 code to connect and print similar data
+python3 code to connect, print similar data and send "DOCK" command
 
     #!/usr/bin/env python3
     import socket
@@ -25,6 +25,8 @@ python3 code to connect and print similar data
     s.connect(("192.168.0.2",23))
     data = s.recv(1024)
     print(data)
+    s.send(bytearray([128, 143, 173])) # start, seek dock, stop
+    s.close()
 
 Other commands are described in
 [iRobot Roomba 600 Open Interface Spec](https://www.irobotweb.com/-/media/MainSite/PDFs/About/STEM/Create/iRobot_Roomba_600_Open_Interface_Spec.pdf)
