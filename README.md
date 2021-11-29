@@ -33,7 +33,7 @@ as RX=gpio13, TX=gpio15 to Roomba:
 
     #define SWAP_PINS 1
 
-To compile and upload to board, click round blue button with right arrow.
+To compile and write flash, click round blue button with right arrow.
 
 When monitored at USB-serial port, it will print IP address where it
 connected.
