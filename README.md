@@ -17,7 +17,7 @@ to reset roomba, type CTRL-G and ENTER, roomba 880 resets as if battery was
 replaced, beeps and prints different messages after reset and again battery
 charging messages as above.
 
-This simple python3 code will also connect and print similar data
+python3 code to connect and print similar data
 
     #!/usr/bin/env python3
     import socket
