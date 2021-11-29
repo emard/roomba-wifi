@@ -2,6 +2,20 @@
 
 Wifi remote control interface for the iRobot Roomba vacuum cleaner.
 
+telnet to roomba, you should display something like this:
+
+    bat:   min 0  sec 10  mV 17061  mA 1016  tenths-deg-C 348  mAH 2696  state 5  
+    bat:   min 0  sec 11  mV 17061  mA 1016  tenths-deg-C 348  mAH 2696  state 5  
+    bat:   min 0  sec 12  mV 17061  mA 1008  tenths-deg-C 348  mAH 2696  state 5  
+    bat:   min 0  sec 13  mV 17061  mA 1023  tenths-deg-C 348  mAH 2696  state 5  
+
+to reset roomba, type CTRL-G and ENTER, roomba 880 resets as if battery was
+replaced, beeps and prints different messages after reset and again battery
+charging messages as above.
+
+Other commands are described in
+[iRobot Roomba 600 Open Interface Spec](https://www.irobotweb.com/-/media/MainSite/PDFs/About/STEM/Create/iRobot_Roomba_600_Open_Interface_Spec.pdf)
+
 # Wifi Module
 
 Get nodemcu from ebay for $3.5 and flash it with some TCP-serial
@@ -12,20 +26,6 @@ use hardware serial at RX=gpio13, TX=gpio15
     #define SWAP_PINS 1
 
 When monitored at serial port, it will print IP address where it connected
-
-if you telnet to roomba, you should see something like this:
-
-    bat:   min 0  sec 10  mV 17061  mA 1016  tenths-deg-C 348  mAH 2696  state 5  
-    bat:   min 0  sec 11  mV 17061  mA 1016  tenths-deg-C 348  mAH 2696  state 5  
-    bat:   min 0  sec 12  mV 17061  mA 1008  tenths-deg-C 348  mAH 2696  state 5  
-    bat:   min 0  sec 13  mV 17061  mA 1023  tenths-deg-C 348  mAH 2696  state 5  
-
-if you type CTRL-G and press ENTER, roomba 880 will reset as if battery was
-replaced and you should hear beep and see printed different messages 
-after reset and again battery charging messages as above.
-
-Other commands are described in
-[iRobot Roomba 600 Open Interface Spec](https://www.irobotweb.com/-/media/MainSite/PDFs/About/STEM/Create/iRobot_Roomba_600_Open_Interface_Spec.pdf)
 
 ![nodemcu](/pic/nodemcu.jpg)
 
