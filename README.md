@@ -19,11 +19,20 @@ Other commands are described in
 # Wifi Module
 
 Get nodemcu from ebay for $3.5 and flash it with some TCP-serial
-bridge code from Arduino Examples "WifiTelnetToSerial", setup WiFi
-user and password to connect to local access point and swap pins to
-use hardware serial at RX=gpio13, TX=gpio15 for Roomba:
+bridge code.
+
+From Arduino install ESP8266 support from Boards Manager.
+
+set board to "NodeMCU 1.0 (ESP-12E Module)".
+
+open Examples -> ESP8266Wifi ->  WifiTelnetToSerial
+
+setup WiFi user and password to connect to local access 
+point and swap pins to use hardware serial at RX=gpio13, TX=gpio15 for Roomba:
 
     #define SWAP_PINS 1
+
+Compile and upload to board, click round blue button with right arrow.
 
 When monitored at USB-serial port, it will print IP address where it
 connected.
