@@ -5,10 +5,24 @@ Wifi remote control interface for the iRobot Roomba vacuum cleaner.
 # Wifi Module
 
 Get nodemcu from ebay for $3.5 and flash it with some TCP-serial
-bridge code from Examples "WifiTelnetToSerial", setup WiFi
-user:password, and swap pins to use hardware serial at RX=gpio13, TX=gpio15
+bridge code from Arduino Examples "WifiTelnetToSerial", setup WiFi
+user and password to connect to local access point and swap pins to
+use hardware serial at RX=gpio13, TX=gpio15
 
     #define SWAP_PINS 1
+
+When monitored at serial port, it will print IP address where it connected
+
+if you telnet to roomba, you should see something like this:
+
+    bat:   min 0  sec 10  mV 17061  mA 1016  tenths-deg-C 348  mAH 2696  state 5  
+    bat:   min 0  sec 11  mV 17061  mA 1016  tenths-deg-C 348  mAH 2696  state 5  
+    bat:   min 0  sec 12  mV 17061  mA 1008  tenths-deg-C 348  mAH 2696  state 5  
+    bat:   min 0  sec 13  mV 17061  mA 1023  tenths-deg-C 348  mAH 2696  state 5  
+
+if you type CTRL-G and press ENTER, roomba 880 will reset as if battery was
+replaced and you should hear beep and see printed different messages 
+after reset and again battery charging messages as above
 
 ![nodemcu](/pic/nodemcu.jpg)
 
