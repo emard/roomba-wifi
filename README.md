@@ -4,6 +4,10 @@ Wifi remote control interface for the iRobot Roomba vacuum cleaner.
 
 telnet to roomba, you should display something like this:
 
+    telnet 192.168.0.2
+    Trying 192.168.0.2...
+    Connected to 192.168.0.2.
+    Escape character is '^]'.
     bat:   min 0  sec 10  mV 17061  mA 1016  tenths-deg-C 348  mAH 2696  state 5  
     bat:   min 0  sec 11  mV 17061  mA 1016  tenths-deg-C 348  mAH 2696  state 5  
     bat:   min 0  sec 12  mV 17061  mA 1008  tenths-deg-C 348  mAH 2696  state 5  
@@ -12,6 +16,15 @@ telnet to roomba, you should display something like this:
 to reset roomba, type CTRL-G and ENTER, roomba 880 resets as if battery was
 replaced, beeps and prints different messages after reset and again battery
 charging messages as above.
+
+This simple python3 code will also connect and print similar data
+
+    #!/usr/bin/env python3
+    import socket
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(("192.168.0.2",23))
+    data = s.recv(1024)
+    print(data)
 
 Other commands are described in
 [iRobot Roomba 600 Open Interface Spec](https://www.irobotweb.com/-/media/MainSite/PDFs/About/STEM/Create/iRobot_Roomba_600_Open_Interface_Spec.pdf)
