@@ -25,6 +25,7 @@ python3 code to connect, print similar data and send "DOCK" command
     s.connect(("192.168.0.2",23))
     data = s.recv(1024)
     print(data)
+    #s.send(bytearray([128, 135, 173])) # start, clean, stop
     s.send(bytearray([128, 143, 173])) # start, seek dock, stop
     s.close()
 
