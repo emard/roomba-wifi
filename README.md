@@ -43,7 +43,7 @@ python3 script to shown 4 chars approximated on 7-segment display:
     disp += b" " * (4-len(disp)) # pad length 4 with spaces
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("192.168.48.116",23))
-    s.send(bytearray([128, 131, 174]))
+    s.send(bytearray([128, 131, 174])) # safe mode
     time.sleep(0.05)
     s.send(bytearray([164])+disp)
     s.close()
