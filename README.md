@@ -46,7 +46,7 @@ python3 script to shown 4 chars approximated on 7-segment display:
     s.send(bytearray([131, 164])+disp)
     s.close()
 
-    ./roomba.disp.py TEXT
+    ./roomba.disp.py TEST
 
 Other commands are described in
 [iRobot Roomba 600 Open Interface Spec](https://www.irobotweb.com/-/media/MainSite/PDFs/About/STEM/Create/iRobot_Roomba_600_Open_Interface_Spec.pdf)
