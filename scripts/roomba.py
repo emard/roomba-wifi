@@ -26,7 +26,7 @@ def disp(x):
   s.connect(host_port)
   s.send(bytearray([128, 131])) # safe mode
   time.sleep(0.05)
-  s.send(bytearray([164])+disp)
+  s.send(bytearray([164])+disp+bytearray([173])) # display and stop
   s.close()
 
 def btn(x):
@@ -50,7 +50,7 @@ def btn(x):
     a |= 1<<7
   s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
   s.connect(host_port)
-  s.send(bytearray([128, 165, a])) # start, btn, value
+  s.send(bytearray([128, 165, a, 173])) # start, btn, value, stop
   s.close()
 
 def set_time():
@@ -62,10 +62,20 @@ def set_time():
   s.connect(host_port)
   s.send(bytearray([128, 131])) # start, safe mode
   time.sleep(0.2)
-  s.send(bytearray([128, 168, weekday, hour, minute])) # start, set time, values
+  s.send(bytearray([128, 168, weekday, hour, minute, 173])) # start, set time, values, stop
+  s.close()
+
+# after talking to roomba, stop open interface
+# if left unstopped, battery will drain deeply
+def stop():
+  s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  s.connect(host_port)
+  s.send(bytearray([128, 173])) # start, stop
   s.close()
 
 def run():
+  if sys.argv[1] == "stop":
+      stop()
   if sys.argv[1] == "disp":
       disp(sys.argv[2])
   if sys.argv[1] == "clean":
@@ -76,5 +86,7 @@ def run():
       set_time()
   if sys.argv[1] == "btn":
       btn(sys.argv[2])
+  if sys.argv[1] == "stop":
+      stop()
 
 run()
