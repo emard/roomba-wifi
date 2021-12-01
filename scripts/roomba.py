@@ -40,6 +40,30 @@ def set_time():
   s.send(bytearray([128, 168, weekday, hour, minute, 173])) # start, set time, ..., stop
   s.close()
 
+def btn(x):
+  # press roomba button (will hold it pressed for 1/6 second)
+  a = 0
+  if x == "clean":
+    a |= 1<<0
+  if x == "spot" or x == "ok":
+    a |= 1<<1
+  if x == "dock": # or x == "day":
+    a |= 1<<2
+  if x == "minute":
+    a |= 1<<3
+  if x == "hour":
+    a |= 1<<4
+  if x == "day":
+    a |= 1<<5
+  if x == "schedule":
+    a |= 1<<6
+  if x == "clock": # or x == "hour":
+    a |= 1<<7
+  s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  s.connect(host_port)
+  s.send(bytearray([128, 165, a])) # start, btn, value
+  s.close()
+
 def run():
   if sys.argv[1] == "disp":
       disp(sys.argv[2])
@@ -49,5 +73,7 @@ def run():
       dock()
   if sys.argv[1] == "set":
       set_time()
+  if sys.argv[1] == "btn":
+      btn(sys.argv[2])
 
 run()
